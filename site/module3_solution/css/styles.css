@@ -1,0 +1,15 @@
+body {
+	font-size: 16px;
+	background-image: url(../images/restaurant_icons.png);
+	background-position: 0 50px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#header-nav {
+	height: 50px;
+	border-radius: 0;
+	border: 0;
+}
+
+#menu {
+}
