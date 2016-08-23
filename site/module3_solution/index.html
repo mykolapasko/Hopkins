@@ -19,14 +19,17 @@
 </head>
 <body>
     <header>
-        <nav id="header-nav" class="navbar navbar-inverse navbar-fixed-top">
+        <nav 
+        id="header-nav" 
+        class="navbar navbar-inverse navbar-fixed-top" 
+        role="navigation">
           <div class="container-fluid">
             <div class="navbar-header">
                 <button 
                 id="dropdown-menu"
                 aria-expanded="false" 
                 type="button" 
-                class="navbar-toggle collapsed" 
+                class="navbar-toggle" 
                 data-toggle="collapse" 
                 data-target="#collapsable-nav">
                     <span class="sr-only">Toggle navigation</span>
@@ -34,16 +37,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Food, LLC</a>
+                <a href="index.html"
+                class="navbar-brand" >Food, LLC</a>
             </div>
             <div 
             aria-expanded="false" 
             class="collapse navbar-collapse" 
             id="collapsable-nav">
-              <ul id="nav-list" class="nav navbar-nav visible-xs">
-                <li><a href="#chiken">Chicken</a></li>
-                <li><a href="#beef">Beef</a></li>
-                <li><a href="#sushi">Sushi</a></li>
+              <ul id="nav-list" class="nav navbar-nav">
+                <li>
+                    <a href="#chiken"
+                    class="visible-xs"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse">Chicken</a>
+                </li>
+                <li>
+                    <a href="#beef"
+                    class="visible-xs" 
+                    data-toggle="collapse" 
+                    data-target=".navbar-collapse">Beef</a>
+                </li>
+                <li>
+                    <a href="#sushi"
+                    class="visible-xs" 
+                    data-toggle="collapse" 
+                    data-target=".navbar-collapse">Sushi</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -53,27 +72,24 @@
         <h1 class="text-center" id="our-menu">Our Menu</h1>
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="item-story" id="chiken">
+                <section class="item-story" id="chiken">
                     <h3 class="text-center">Chiken</h3>
-                    <p>Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad.<br>(End of Chiken section)<a href="#main"> Back To Top</a></p> 
-                </div>   
+                    <p>Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad. Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad.<br>(End of Chiken section)<a href="#main"> Back To Top</a></p> 
+                </section>   
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="item-story" id="beef">
+                <section class="item-story" id="beef">
                     <h3 class="text-center">Beef</h3>
-                    <p>Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad.<br>(End of Chiken section)<a href="#main"> Back To Top</a></p>
-                </div>    
+                    <p>Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad. Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad.<br>(End of Chiken section)<a href="#main"> Back To Top</a></p>
+                </section>    
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4">
-                <div class="item-story" id="sushi">
+                <section class="item-story" id="sushi">
                     <h3 class="text-center">Sushi</h3>
-                    <p>Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad.<br>(End of Chiken section)<a href="#main"> Back To Top</a></p>
-                </div> 
+                    <p>Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad. Lorem ipsum dolor sit amet, eu sit voluptua insolens, aliquip accusam ne vel, ei sed everti facilisis torquatos. Nam eu diceret euismod praesent, no dicta detraxit consetetur quo. An vel labore volumus commune, ad sea quis delenit. No vide duis percipit per, omnis omnes vix te. Eu eos meis dictas, agam latine sententiae no usu. Aeque iusto posidonium pri ex. Id tincidunt repudiandae liberavisse qui, ei tation verear viderer sit, mei vero lorem constituam et. In splendide ullamcorper pri, ut libris mollis molestiae sit. No veri audiam est, debet quidam eruditi id cum. Ei essent maiorum tacimates cum. Mea ne mazim aliquam adversarium. Cum stet recteque id, vel ex exerci placerat oporteat. Ex diam impedit nam. Sea te tempor euripidis, posse zril dolorem vis et, cu per affert essent audiam. Zril exerci scriptorem ad vel, nam prima accusamus gubergren an. Id vide duis assentior eam. Vis ea amet tamquam scriptorem. Mei decore delectus no, sea at omnesque volutpat pertinacia. Graecis persequeris ne cum, at mel delenit vocibus, quo no causae aliquip. Cum id dicunt perpetua, audiam propriae scripserit ea vix. Duo et hinc omnium consequuntur. Ad mutat alterum nostrum has, duo cu sumo ludus, nec no aliquid omittam. Ad malorum labitur est. Iudico quidam no eum, velit aeque graeci vix ne, eos summo invidunt suscipiantur ad.<br>(End of Chiken section)<a href="#main"> Back To Top</a></p>
+                </section> 
             </div>
         </div>
-        <div id="color1"></div>
-        <div id="color2"></div>
-        <div id="color3"></div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -82,13 +98,14 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Navbar hides initial content when jumping to in-page anchor
+    <!-- Fix start
+        Navbar hides initial content when jumping to in-page anchor
         https://github.com/twbs/bootstrap/issues/1768 -->
     <script type="text/javascript">
         var shiftWindow = function() { scrollBy(0, -50) };
         if (location.hash) shiftWindow();
         window.addEventListener("hashchange", shiftWindow);
     </script>
-    <!-- End of fix -->
+    <!-- Fix end -->
 </body>
 </html>
