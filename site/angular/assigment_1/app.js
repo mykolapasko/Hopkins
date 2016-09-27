@@ -31,11 +31,8 @@ function LunchCheckController($scope) {
 		var normalized = str.split(",").filter(function (a) {
 		return (a !== " ") && (a !== "")
 		});
-    console.log(normalized.length);
 	return normalized.length
 	};
-  console.log($scope.messageStyle);
-  console.log(getNumber($scope.input_string));
 };
 };
 })();
