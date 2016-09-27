@@ -2,26 +2,32 @@
 'use strict';
 
 angular.module('LunchCheck', [])
+.controller('LunchCheckController', LunchCheckController); 
 
-.controller('LunchCheckController', function ($scope) {
-  $scope.message ="";
-  $scope.input_string ="";
+LunchCheckController.$inject = ['$scope'];
+function LunchCheckController($scope) {
+  $scope.message = "";
+  $scope.input_string = "";
 
-  $scope.displayMessage = function(){
+  $scope.displayMessage = function () {
   	var counter = getNumber($scope.input_string);
-  	console.log("counter: ", counter);
   	if (counter === 0) {
-	$scope.message = "Message_0";
+	$scope.message = "Please enter data first";
 	} else if (0 < counter && counter < 4) {
-	$scope.message = "Message_1";
+	$scope.message = "Enjoy!";
 	} else {
-	$scope.message = "Message_2";
+	$scope.message = "Too much!";
 	};
 
 	function getNumber(str) {
-		var myarray = str.split(", ");
-		return (myarray === "" ) || (myarray[0] === str) ? 0 : str.split(", ").length
+		var normalized = str.split(",").filter(function (a) {
+		return (a !== " ") && (a !== "")
+		});
+	return (normalized[0] === str) ? 0 : normalized.length
 	};	
 };
-}); 
+};
+
 })();
+
+
