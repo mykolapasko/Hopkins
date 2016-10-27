@@ -12,8 +12,9 @@ function NarrowItDownController(MenuSearchService) {
 
   var promise = MenuSearchService.getMatchedMenuItems();
 
-  promise.then(function (response) {
-    menu.items = response.data.menu_items;
+  promise.then(function (foundItems) {
+    menu.found = foundItems;
+    console.log("Im here");
   })
   .catch(function (error) {
     console.log("Something went terribly wrong.")
@@ -28,20 +29,19 @@ function MenuSearchService($http, ApiBasePath) {
     return $http({
       method: "GET",
       url: (ApiBasePath + "/menu_items.json")
-    }).then(function (result) {
+    })
+    .then(function (result) {
       var foundItems = [];
       result.data.menu_items.forEach(function (a){
-        a.description.split(" ").forEach(function (b){
-          console.log("a: ", a, "b: ", b);
-          if (b === "chicken") {
-            foundItems.push(a);
-            console.log("foundItems: ", foundItems);
-          }
-        });
+        if (a.description.split(" ").some(function(b){
+          return b === "chicken";
+        })
+          ) {
+          foundItems.push(a);
+          console.log(a.description);
+        }
       });
-      console.log(result.data.menu_items[0].description.split(" "));
-      console.log(foundItems);
-      return result;
+      return foundItems;
     });
   }
 }
