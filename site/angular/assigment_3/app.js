@@ -25,11 +25,24 @@ function MenuSearchService($http, ApiBasePath) {
   var service = this;
 
   service.getMatchedMenuItems = function () {
-    var response = $http({
+    return $http({
       method: "GET",
       url: (ApiBasePath + "/menu_items.json")
+    }).then(function (result) {
+      var foundItems = [];
+      result.data.menu_items.forEach(function (a){
+        a.description.split(" ").forEach(function (b){
+          console.log("a: ", a, "b: ", b);
+          if (b === "chicken") {
+            foundItems.push(a);
+            console.log("foundItems: ", foundItems);
+          }
+        });
+      });
+      console.log(result.data.menu_items[0].description.split(" "));
+      console.log(foundItems);
+      return result;
     });
-    return response;
   }
 }
 
