@@ -15,11 +15,12 @@
     <div class="form-group">
       <input type="text" 
               placeholder="search term" 
-              class="form-control">
+              class="form-control"
+              ng-model="menu.searchTerm">
     </div>
     <div class="form-group narrow-button">
       <button class="btn btn-primary"
-              ng-click="menu">Narrow It Down For Me!</button>
+              ng-click="menu.getMatchedMenuItems(menu.searchTerm);">Narrow It Down For Me!</button>
     </div>
 
     <!-- List of descriptions -->
@@ -28,7 +29,17 @@
     <div class="row-content">
       <div class="col-xs-12">
         <ul>
-          <li ng-repeat="item in menu.found">{{item.description}}</li>
+          <li ng-repeat="item in menu.found">
+            <div class="media">
+              <a class="media-left" href="#">
+                <img class="media-object" src="/images/A.jpg" alt="Generic placeholder image">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">{{item.name}}</h4>
+                  {{item.description}}
+              </div>
+            </div>
+          </li>
         </ul>        
       </div>
     </div>
