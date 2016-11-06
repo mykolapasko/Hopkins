@@ -32,7 +32,9 @@
           <li ng-repeat="item in menu.found">
             <div class="media">
               <a class="media-left" href="#">
-                <img class="media-object" src="/images/A.jpg" alt="Generic placeholder image">
+                <img class="media-object" 
+                ng-src="images_1/{{item.short_name}}.jpg" 
+                alt="Generic placeholder image">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">{{item.name}}</h4>
