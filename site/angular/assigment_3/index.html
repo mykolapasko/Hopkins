@@ -20,33 +20,23 @@
     </div>
     <div class="form-group narrow-button">
       <button class="btn btn-primary"
-              ng-click="menu.getMatchedMenuItems(menu.searchTerm);">Narrow It Down For Me!</button>
+              ng-click="menu.getMatchedMenuItems(menu.searchTerm);">
+              Narrow It Down For Me!
+      </button>
     </div>
 
     <!-- List of descriptions -->
 
     <!-- found-items should be implemented as a component -->
-    <div class="row-content">
-      <div class="col-xs-12">
-        <div class="media" ng-repeat="item in menu.found">
-          <a class="media-left" href="#">
-            <img class="media-object" 
-              ng-src="images_1/{{item.short_name}}.jpg" 
-              alt="Generic placeholder image">
-            </a>
-            <div class="media-body">
-              <h4 class="media-heading">{{item.name}}</h4>
-                  {{item.description}}
-              <div class="form-group narrow-button">
-                  <button class="btn btn-primary" ng-click="menu.getMatchedMenuItems(menu.searchTerm);">Narrow It Down For Me!</button>
-              </div>
-            </div>
-          </div>      
+    <div class="container-fluid">
+      <div class="row-content">
+        <found-items></found-items>
       </div>
     </div>
+
     
     <!-- found-items should be implemented as a component -->
-    <found-items found-items="...." on-remove="...."></found-items>
+    
   </div>
 
 </body>

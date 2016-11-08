@@ -51,6 +51,6 @@ input[type="text"] {
   }
 }
 
-li {
-  list-style-type: none;
+#remove {
+  margin-top: 10px;
 }
