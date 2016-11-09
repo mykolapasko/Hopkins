@@ -51,6 +51,25 @@ input[type="text"] {
   }
 }
 
-#remove {
-  margin-top: 10px;
+#item {
+  background-color: #999999;
+  margin: 15px;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 15px;
 }
+
+#remove-button {
+  background-color: #C14543;
+  float: right;
+  color: white;
+}
+
+#short-name {
+  background-color: #E5D198;
+  padding: 10px;
+  font-size: 20px;
+}
+
+

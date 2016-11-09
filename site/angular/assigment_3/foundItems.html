@@ -1,27 +1,25 @@
-<div class="col-xs-10 col-xs-offset-1">
-  <div class="media" ng-repeat="item in menu.found">
-    <a class="media-left" href="#">
-    <img class="img-circle"  
-    ng-src="images_1/{{ item.short_name }}.jpg" 
-    alt="{{ item.name }} image">
-    </a>
-  <div class="media-body">
-    <h4 class="media-heading">
-      <span class="label label-default">{{ item.short_name }}</span>
+<div class="col-xs-12">
+  <div  class="row" 
+        id="item"
+        ng-repeat="item in menu.found">
+    <div class="col-xs-12 col-sm-4">
+      <img class="img-responsive img-circle center-block"  
+          ng-src="images_1/{{ item.short_name }}.jpg" 
+          alt="{{ item.name }} image">
+    </div>
+    <div class="col-xs-12 col-sm-8 text-left">
+      <h3>
+      <span class="badge" id="short-name">{{ item.short_name }}</span>
       {{ item.name }} 
-    </h4>
-    <p>{{ item.description }}</p>
-    <div class="form-group">
-      <div class="row">
-        <div class="col-xs-6 col-xs-offset-6">
-          <button class="btn btn-sm btn-danger"
-                  id = "remove" 
-                  ng-click="menu.removeItem($index)">
-                  Don't want this one!
-          </button> 
-        </div>
-      </div>
+      </h3>
+      <p>{{ item.description }}</p>
+      <div class="form-group">
+        <button class="btn btn-md btn-defoult"
+                id = "remove-button" 
+                ng-click="menu.removeItem($index)">
+                Don't want this one!
+        </button> 
+      </div> 
     </div>
   </div>
-  </div>      
 </div>
