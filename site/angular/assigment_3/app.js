@@ -19,12 +19,14 @@ function NarrowItDownController(MenuSearchService) {
   var menu = this;
   menu.searchTerm = "";
 
-
   menu.getMatchedMenuItems = function(searchTerm) {
     var promise = MenuSearchService.getMatchedMenuItems(searchTerm);
+    menu.loading = true;
     promise.then(function (foundItems) {
       menu.found = foundItems;
-    })
+    }).then(function() {
+      menu.loading = false;
+    });
   }
 
   menu.removeItem = function(index) {
