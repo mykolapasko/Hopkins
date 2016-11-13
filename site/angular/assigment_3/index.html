@@ -26,7 +26,13 @@
       </div>
     </div>
     <div class="row">
-      <found-items></found-items>
+      <div class="loader center-block" 
+            ng-if="menu.isLoading"></div>
+      <div ng-if="menu.isEmpty"><h1 class="text-center">Nothing found</h1></div>
+      <found-items 
+        items="menu.found" 
+        on-remove="menu.removeItem(index)">  
+      </found-items>
     </div>
   </div>
 </body>

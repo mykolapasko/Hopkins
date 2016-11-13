@@ -1,8 +1,7 @@
 <div class="col-xs-12">
-  <div class="loader center-block" ng-show="menu.loading"></div>
   <div  class="row" 
         id="item"
-        ng-repeat="item in menu.found">
+        ng-repeat="item in list.items">
     <div class="col-xs-12 col-sm-4">
       <img class="img-responsive img-circle center-block"  
           ng-src="images_1/{{ item.short_name }}.jpg" 
@@ -17,7 +16,7 @@
       <div class="form-group">
         <button class="btn btn-md btn-defoult"
                 id = "remove-button" 
-                ng-click="menu.removeItem($index)">
+                ng-click="list.onRemove({index: $index});">
                 Don't want this one!
         </button> 
       </div> 
