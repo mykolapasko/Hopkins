@@ -1,10 +1,9 @@
 (function () {
 'use strict';
 
-angular.module('Data')
-.service('MenuDataService', MenuDataService);
+angular.module('MenuApp')
+.service('MenuDataService', MenuDataService)
 .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
-
 
 MenuDataService.$inject = ['$http', 'ApiBasePath'];
 function MenuDataService($http, ApiBasePath) {
@@ -15,10 +14,8 @@ function MenuDataService($http, ApiBasePath) {
       method: "GET",
       url: (ApiBasePath + "/categories.json")
     });
-
     return response;
   };
-
 
   service.getItemsForCategory = function (shortName) {
     var response = $http({
@@ -28,11 +25,8 @@ function MenuDataService($http, ApiBasePath) {
         category: shortName
       }
     });
-
     return response;
   };
-
 }
-
 
 })();
