@@ -6,8 +6,7 @@ angular.module('MenuApp')
 CategoryDetailController.$inject = ['items'];
 	function CategoryDetailController(items) {
 	  var detail = this;
-	  detail.items = items.data;
-	  console.log(items.data);
+	  detail.items = items.data.menu_items;
 	}
 
 })();
