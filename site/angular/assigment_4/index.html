@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Menu App</title>
   </head>
   <body>
@@ -16,20 +17,22 @@
     
     <!-- Modules -->
     <script src="src/menuapp.module.js"></script>
+    <script src="src/data.module.js"></script>
 
     <!-- Routes -->
     <script src="src/routes.js"></script>
 
     <!-- Controllers -->
-    <script src="src/categories.controller.js"></script>
-    <script src="src/categorydetail.controller.js"></script>
+    <script src="src/categories/categories.controller.js"></script>
+    <script src="src/items/items.controller.js"></script>
     
     <!-- Components -->
-    <script src="src/categories.component.js"></script>
-    <script src="src/detail.component.js"></script>
+    <script src="src/categories/categories.component.js"></script>
+    <script src="src/items/items.component.js"></script>
 
     <!-- Services -->
-    <script src="src/menudata.service.js"></script>
+    <script src="src/data.service.js"></script>
+    <script src="src/data.constant.js"></script>
     
   </body>
 </html>
