@@ -1,5 +1,6 @@
 body {
-  font-size: 1.2em;
+  font-size: 1.8em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .error {
@@ -16,4 +17,11 @@ body {
 
 .active {
   font-weight: bold;
+}
+
+#button-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
 }

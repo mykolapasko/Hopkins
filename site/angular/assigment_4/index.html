@@ -2,14 +2,20 @@
 <html ng-app='MenuApp'>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Menu App</title>
   </head>
   <body>
-    <h1>Welcome to Menu App</h1>
-
-    <ui-view></ui-view>
+    <div class="container-fluid">
+      <div class="row-content">
+        <div class="col-xs-12">
+          <h1 class="text-center">Welcome to Menu App</h1>
+          <ui-view></ui-view>
+        </div>
+      </div>
+    </div>
 
     <!-- Libraries -->
     <script src="lib/angular.min.js"></script>
