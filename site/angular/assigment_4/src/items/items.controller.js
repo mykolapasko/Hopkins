@@ -6,7 +6,7 @@ angular.module('data')
 ItemsController.$inject = ['items'];
 	function ItemsController(items) {
 	  var itemsCtrl = this;
-	  itemsCtrl.items = items.data.menu_items;
+	  itemsCtrl.items = items;
 	}
 
 })();

@@ -13,7 +13,10 @@ function DataService($http, ApiBasePath) {
       method: "GET",
       url: (ApiBasePath + "/categories.json")
     });
-    return response;
+    return response
+      .then(function(response) {
+        return response.data;
+    });
   };
 
   service.getItemsForCategory = function (categoryShortName) {
@@ -24,7 +27,10 @@ function DataService($http, ApiBasePath) {
         category: categoryShortName
       }
     });
-    return response;
+    return response
+      .then(function(response) {
+        return response.data.menu_items;
+    });
   };
 }
 
