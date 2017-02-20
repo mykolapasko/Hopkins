@@ -10,8 +10,10 @@ function RegistrationService() {
 
   service.getUserInfo = function () {
   	if (service.users.length === 0) {
+      console.log("service: ", service.users);
   		return "Not Signed Up Yet. Sign up Now!";
   	} else {
+      console.log("service: ", service.users[0].username);
   		return service.users[0];
   	}
     

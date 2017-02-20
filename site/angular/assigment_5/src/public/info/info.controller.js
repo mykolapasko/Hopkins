@@ -8,6 +8,7 @@ InfoController.$inject = ['userInfo'];
 function InfoController(userInfo) {
   var $ctrl = this;
   $ctrl.userInfo = userInfo;
+  console.log($ctrl.userInfo);
 }
 
 
