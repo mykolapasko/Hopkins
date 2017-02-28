@@ -4,11 +4,11 @@
 angular.module('public')
 .controller('InfoController', InfoController);
 
-InfoController.$inject = ['userInfo'];
-function InfoController(userInfo) {
+InfoController.$inject = ['userInfo', 'isSubmited'];
+function InfoController(userInfo, isSubmited) {
   var $ctrl = this;
   $ctrl.userInfo = userInfo;
-  console.log($ctrl.userInfo);
+  $ctrl.isSubmited = isSubmited;
 }
 
 

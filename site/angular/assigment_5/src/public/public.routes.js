@@ -53,10 +53,19 @@ function routeConfig ($stateProvider) {
       controller: 'InfoController',
       controllerAs: 'infoCtrl',
       resolve: {
+
         userInfo: ['RegistrationService', function (RegistrationService) {
           return RegistrationService.getUserInfo();
+          }],
+
+        isSubmited: ['RegistrationService', function (RegistrationService) {
+          return RegistrationService.isSubmited();
         }]
+
       }
     });
-}
+
+  }
+
+
 })();

@@ -1,3 +1,13 @@
-<div class="container">
-	<h1 class="text-center">Hey there!{{infoCtrl.userInfo.username}}</h1>
+<div ng-if="infoCtrl.isSubmited"
+		 class="text-center">
+	<h3>You are not currently registered!</h3>
+</div>
+<div class="container" 
+		 ng-if="!infoCtrl.isSubmited">
+	<h1 class="text-center">Personal information</h1>
+	<div class="center-block">
+		<p class="text-center">Name: {{infoCtrl.userInfo.username}}</p>
+		<p class="text-center">Email: {{infoCtrl.userInfo.email}}</p>
+		<p class="text-center">Phone: {{infoCtrl.userInfo.phone}}</p>
+	</div>
 </div>
