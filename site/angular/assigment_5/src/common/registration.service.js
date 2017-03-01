@@ -14,17 +14,18 @@ function RegistrationService() {
 
   service.setUserInfo = function (userInfo) {
   	var new_user = {};
-  	new_user.username = userInfo.username;
+  	new_user.firstname = userInfo.firstname;
+    new_user.lastname = userInfo.lastname;
   	new_user.email = userInfo.email;
   	new_user.phone = userInfo.phone;
+    new_user.favorite = userInfo.favorite;
   	service.users.push(new_user);
   };
 
   service.isSubmited = function () {
     return service.users.length !== 0 ? false : true;
   };
-
-
+  
 }
 
 

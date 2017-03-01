@@ -1,13 +1,15 @@
 <div ng-if="infoCtrl.isSubmited"
 		 class="text-center">
-	<h3>You are not currently registered!</h3>
+	<h3>Not Signed Up Yet. <a ui-sref="public.registration">Sign up Now!</a></h3>
 </div>
 <div class="container" 
 		 ng-if="!infoCtrl.isSubmited">
 	<h1 class="text-center">Personal information</h1>
 	<div class="center-block">
-		<p class="text-center">Name: {{infoCtrl.userInfo.username}}</p>
+		<p class="text-center">Firstname: {{infoCtrl.userInfo.firstname}}</p>
+		<p class="text-center">Lastname: {{infoCtrl.userInfo.lastname}}</p>
 		<p class="text-center">Email: {{infoCtrl.userInfo.email}}</p>
 		<p class="text-center">Phone: {{infoCtrl.userInfo.phone}}</p>
+		<p class="text-center">Favorite dish: {{infoCtrl.userInfo.favorite}}</p>
 	</div>
 </div>
