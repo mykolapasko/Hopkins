@@ -1,5 +1,7 @@
 (function () {
 
+"use strict";
+
 angular.module('public')
 .controller('RegistrationController', RegistrationController);
 
@@ -12,6 +14,8 @@ function RegistrationController(RegistrationService) {
     reg.completed = true;
     RegistrationService.setUserInfo(reg.user);
   };
+
+  reg.isShortname = RegistrationService.isShortname;
 }
 
 })();

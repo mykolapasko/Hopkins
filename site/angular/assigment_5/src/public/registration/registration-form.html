@@ -86,7 +86,8 @@
                class="form-control" 
                placeholder="Specify your favorite dish menu number (e.g. b12)"
                ng-model="regCtrl.user.favorite"
-               required>
+               required
+               shortname-validator>
             <br>
       </div>
     </div>
@@ -94,7 +95,7 @@
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" 
                 class="btn btn-default"
-                ng-disabled="regForm.$invalid"
+                ng-disabled="regForm.$invalid || regForm.isShortname"
                 ng-click="regCtrl.submit(user)">
                 Sign in
         </button>

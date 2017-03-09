@@ -25,6 +25,7 @@ function RegistrationService() {
   service.isSubmited = function () {
     return service.users.length !== 0 ? false : true;
   };
+  service.isShortname = false;
   
 }
 
