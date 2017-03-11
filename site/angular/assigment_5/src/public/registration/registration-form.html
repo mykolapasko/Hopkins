@@ -88,6 +88,9 @@
                ng-model="regCtrl.user.favorite"
                required
                shortname-validator>
+               <span ng-if="regForm.favorite.$pending">
+                    Checking your favorite dish.
+              </span>
             <br>
       </div>
     </div>
@@ -95,7 +98,7 @@
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" 
                 class="btn btn-default"
-                ng-disabled="regForm.$invalid || regForm.isShortname"
+                ng-disabled="regForm.$invalid || regForm.$pending"
                 ng-click="regCtrl.submit(user)">
                 Sign in
         </button>
