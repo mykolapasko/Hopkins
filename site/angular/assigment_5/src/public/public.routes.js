@@ -56,7 +56,7 @@ function routeConfig ($stateProvider) {
 
         userInfo: ['RegistrationService', function (RegistrationService) {
           return RegistrationService.getUserInfo();
-          }],
+        }],
 
         isSubmited: ['RegistrationService', function (RegistrationService) {
           return RegistrationService.isSubmited();

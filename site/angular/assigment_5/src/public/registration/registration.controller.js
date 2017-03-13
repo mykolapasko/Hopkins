@@ -14,8 +14,6 @@ function RegistrationController(RegistrationService) {
     reg.completed = true;
     RegistrationService.setUserInfo(reg.user);
   };
-
-  reg.isShortname = RegistrationService.isShortname;
 }
 
 })();

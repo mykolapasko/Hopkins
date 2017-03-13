@@ -3,19 +3,7 @@
 "use strict";
 
 angular.module('public')
-.directive('shortnameValidator', ShortnameValidator)
-//.service('ValidationService', ValidationService);
-
-// ValidationService.$inject = ['$http', 'ApiPath'];
-// function ValidationService($http, ApiPath) {
-// 	var service = this;
-// 	service.getShortName = function(shortName) {
-// 		var config = {};
-// 		if (shortName) {
-// 			config.params = {'short_name': shortName};
-// 		}
-// 	};
-// }
+.directive('shortnameValidator', ShortnameValidator);
 
 ShortnameValidator.$inject = ['$http', 'ApiPath', '$q'];
 function ShortnameValidator($http, ApiPath, $q) {
@@ -36,6 +24,7 @@ function ShortnameValidator($http, ApiPath, $q) {
             if (!response) {
               return $q.reject();
             }
+
             return true;
           });
       };

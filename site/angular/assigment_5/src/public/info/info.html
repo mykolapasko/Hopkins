@@ -2,7 +2,7 @@
 		 class="text-center">
 	<h3>Not Signed Up Yet. <a ui-sref="public.registration">Sign up Now!</a></h3>
 </div>
-<div class="container" 
+<!-- <div class="container" 
 		 ng-if="!infoCtrl.isSubmited">
 	<h1 class="text-center">Personal information</h1>
 	<div class="center-block">
@@ -11,5 +11,14 @@
 		<p class="text-center">Email: {{infoCtrl.userInfo.email}}</p>
 		<p class="text-center">Phone: {{infoCtrl.userInfo.phone}}</p>
 		<p class="text-center">Favorite dish: {{infoCtrl.userInfo.favorite}}</p>
+	</div>
+</div> -->
+<div class="menu-item-tile col-md-6" ng-if="!infoCtrl.isSubmited">
+	<div class="row">
+		<div class="col-sm-5">
+			<div class="menu-item-photo">
+				<img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.userInfo.favorite}}.jpg">
+			</div>
+		</div>
 	</div>
 </div>

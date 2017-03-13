@@ -18,14 +18,13 @@ function RegistrationService() {
     new_user.lastname = userInfo.lastname;
   	new_user.email = userInfo.email;
   	new_user.phone = userInfo.phone;
-    new_user.favorite = userInfo.favorite;
+    new_user.favorite = userInfo.favorite.toUpperCase();
   	service.users.push(new_user);
   };
 
   service.isSubmited = function () {
     return service.users.length !== 0 ? false : true;
   };
-  service.isShortname = false;
   
 }
 
