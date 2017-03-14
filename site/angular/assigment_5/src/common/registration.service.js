@@ -4,7 +4,9 @@
 angular.module('common')
 .service('RegistrationService', RegistrationService);
 
-function RegistrationService() {
+RegistrationService.$inject = ['$http', 'ApiPath'];
+
+function RegistrationService($http, ApiPath) {
   var service = this;
   service.users = [];
 
@@ -18,8 +20,25 @@ function RegistrationService() {
     new_user.lastname = userInfo.lastname;
   	new_user.email = userInfo.email;
   	new_user.phone = userInfo.phone;
-    new_user.favorite = userInfo.favorite.toUpperCase();
-  	service.users.push(new_user);
+
+
+    // new_user.favorite = userInfo.favorite.toUpperCase();
+
+    var promise = $http.get(ApiPath + '/menu_items.json')
+    .then(function (response) {
+      return response.data.menu_items;
+    })
+    .then(function (response) {
+      return response.filter(function(currentValue) {
+        return currentValue.short_name === userInfo.favorite.toUpperCase();
+      });
+    })
+    .then(function(response) {
+      new_user.favorite = response[0];
+      service.users.push(new_user);
+      console.log(new_user);
+    });
+    
   };
 
   service.isSubmited = function () {
