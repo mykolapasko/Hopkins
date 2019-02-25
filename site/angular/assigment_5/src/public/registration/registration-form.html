@@ -91,6 +91,9 @@
                <span ng-if="regForm.favorite.$pending">
                     Checking your favorite dish.
               </span>
+              <span ng-if="regForm.favorite.$invalid">
+                    No such menu number exists.
+              </span>
             <br>
       </div>
     </div>
