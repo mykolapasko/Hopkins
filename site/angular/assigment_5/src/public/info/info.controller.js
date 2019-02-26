@@ -6,6 +6,7 @@ angular.module('public')
 
 InfoController.$inject = ['userInfo', 'isSubmited', 'ApiPath'];
 function InfoController(userInfo, isSubmited, ApiPath) {
+	var $ctrl = this;
   $ctrl.userInfo = userInfo;
   $ctrl.isSubmited = isSubmited;
   $ctrl.basePath = ApiPath;
