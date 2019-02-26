@@ -20,10 +20,10 @@
 		<div class="row">
 			<div class="col-sm-7">
 				<div class="center-block">
-					<p class="text-center">Firstname: {{userInfo.firstname}}</p>
-					<p class="text-center">Lastname: {{userInfo.lastname}}</p>
-					<p class="text-center">Email: {{userInfo.email}}</p>
-					<p class="text-center">Phone: {{userInfo.phone}}</p>
+					<p class="text-center">{{infoCtrl.userInfo.firstname}}</p>
+					<p class="text-center">{{infoCtrl.userInfo.lastname}}</p>
+					<p class="text-center">{{infoCtrl.userInfo.email}}</p>
+					<p class="text-center">{{infoCtrl.userInfo.phone}}</p>
 <!-- 					<p class="text-center">Phone: {{infoCtrl.userInfo.favorite.short_name}}</p> -->
 				</div>
 		  </div>
@@ -31,9 +31,9 @@
 				<div class="menu-item-photo">
 					<img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.userInfo.favorite.short_name}}.jpg">
 				</div>
-				<div>
-					<h3 class="text-center">{{userInfo.favorite.name}}</h3>
-					<p class="text-center">{{userInfo.favorite.description}}</p>
+				<div class="menu-item-description">
+					<h3 class="text-center">{{infoCtrl.userInfo.favorite.name}}</h3>
+					<p class="text-center">{{infoCtrl.userInfo.favorite.description}}</p>
 				</div>
 			</div>
 		</div>
