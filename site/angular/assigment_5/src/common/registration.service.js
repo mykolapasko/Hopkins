@@ -20,6 +20,7 @@ function RegistrationService($http, ApiPath) {
     new_user.lastname = userInfo.lastname;
   	new_user.email = userInfo.email;
   	new_user.phone = userInfo.phone;
+    new_user.favorite = userInfo.favorite;
 
 
     // new_user.favorite = userInfo.favorite.toUpperCase();
