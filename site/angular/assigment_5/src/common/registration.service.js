@@ -20,10 +20,6 @@ function RegistrationService($http, ApiPath) {
     new_user.lastname = userInfo.lastname;
   	new_user.email = userInfo.email;
   	new_user.phone = userInfo.phone;
-    new_user.favorite = userInfo.favorite;
-
-
-    // new_user.favorite = userInfo.favorite.toUpperCase();
 
     var promise = $http.get(ApiPath + '/menu_items.json')
     .then(function (response) {
@@ -37,7 +33,7 @@ function RegistrationService($http, ApiPath) {
     .then(function(response) {
       new_user.favorite = response[0];
       service.users.push(new_user);
-      console.log(new_user);
+      console.log(new_user, service.users);
     });
     
   };
