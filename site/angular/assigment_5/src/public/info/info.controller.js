@@ -4,9 +4,8 @@
 angular.module('public')
 .controller('InfoController', InfoController);
 
-InfoController.$inject = ['ApiPath', 'RegistrationService'];
-function InfoController(RegistrationService, ApiPath) {
-  var $ctrl = this;
+InfoController.$inject = ['userInfo', 'isSubmited', 'ApiPath'];
+function InfoController(userInfo, isSubmited, ApiPath) {
   $ctrl.userInfo = userInfo;
   $ctrl.isSubmited = isSubmited;
   $ctrl.basePath = ApiPath;
